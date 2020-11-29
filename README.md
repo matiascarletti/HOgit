@@ -14,11 +14,12 @@ Pasos con los que armamos el repo de github de HOgit.
 ## Cómo creamos este repositorio
 
 Inicialmente estaba creado en github (desde la WEB) con 
-sólo un README. EN cualquier lugar pueden (y deberían!)
+sólo un README. En cualquier lugar pueden (y deberían!)
 correr `git status` y `git branch -a` para chequear
 en qué estado está el repositorio y en qué branch están:
 
 
+### Clonando el repositorio
 Clonamos un repositorio de github con sólo un README
 
 ```
@@ -26,6 +27,8 @@ git clone https://github.com/wtpc/HOgit.git
 cd HOgit
 ```
 
+
+### Nuevo snapshot: modificando archivo y haciedo commit del cambio
 Editamos el archivo de README y hacemos un nuevo commit
 
 ```
@@ -35,6 +38,8 @@ git add README.md
 git commit
 ```
 
+
+### Creando y saltando entre ramas: Modificacion del archivo en cada rama
 Ya hay un nuevo snapshot. Ahora creamos una branch
 
 ```
@@ -47,7 +52,7 @@ y nos movemos a ella
 git checkout charlas
 ```
 
-en esta branch, editamos README.md de nuevp
+en esta branch, editamos README.md de nuevo
 
 ```
 vi README.md
@@ -78,6 +83,8 @@ git add ejercicios.md
 git commit
 ```
 
+
+### Uniendo cambios entre ramas
 Y ahora, en master, hacemos un merge de ambas branches por separado:
 (fíjense que no importa que el orden sea el mismo que en el que 
 las modificamos. es sensato porque las branches no se comunican)
@@ -89,12 +96,16 @@ git merge --no-ff charlas
 
 la opción --no-ff sirve para que no "mezcle" las dos branches, y queda más prolijo el network. recomienod que la usen siempre, pero no es fundamental.
 
+
+### Cheaqueando historia del repositorio
 si quieren ver cómo quedó la historia del repo:
 
 ```
 git log --oneline --graph
 ```
 
+
+### Subiendo cambios al repositiorio online
 finalmente, hacemos un push de todas las branches:
 
 ```
@@ -105,6 +116,8 @@ git push -u origin charlas
 
 y listo! en nuestra cuenta de github ya tiene que estar subido. pueden ver el network de github que les va a mostrar la historia
 
+
+### Edición y subida final del README.md con los comandos propios
 Luego también editamos este readme para agregar los comandos con los que hicimos el repositorio
 
 
