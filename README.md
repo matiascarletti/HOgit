@@ -130,6 +130,45 @@ git commit
 y el push
 
 ```
+
+### Mi historial de comandos siguiendo este tutorial
+cd tecnicasDeProgramacionCientifica/ 
+git clone https://github.com/matiascarletti/HOgit
+cd HOgit/
+gedit README.md 
+git add README.md 
+git commit -m 'Se separaron las actividades del tutorial por distintas tareas marcadas por subtitulos de tercera jerarquía. Además se corrigió un error de tipeo encontrado'
+git status
+git branch -a
+git checkout charlas
+git branch -a
+gedit README.md 
+git add README.md 
+git commit -m "Agregando mi opinion sobre las charlas del curso" 
+git status
+git branch -a
+git checkout master 
+git checkout ejercicios
+git branch -a
+git status 
+gedit ejercicios.md 
+git status 
+git add ejercicios.md 
+git commit -m "agregando mi opinion personal sobre los ejercios del curso"
+git status
+git checkout master 
+git merge --no-ff ejercicios 
+git merge --no-ff charlas # me tiraba un mensage de conflicto
+git branch -a #me fijé en que brack estaba parado
+gedit README.md # miré el README.md a ver cuales eran los conflictos y borré esas lineas que daban conflicto
+git merge --no-ff charlas # Mergie denuevo y me seguía tirando conflicto por que no puse el agregué el README.md modificado al git y #tampoco hice el commit del mismo
+git add README.md 
+git commit -m "Arreglando conflictos con charlas para realizar el respectivo merge"
+git merge --no-ff charlas # Si funcionó esta vez!! 
+git log --oneline --graph 
+git push -u origin master
+git push -u origin ejercicios 
+git push -u origin charlas 
 git push
 ```
 
